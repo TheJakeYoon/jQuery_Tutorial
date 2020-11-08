@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav nav-item-custom ml-auto">
                 <li class="nav-item">
-                    <a onclick="scrollToSelection()" class="nav-link" href="/about">Selection</a>
+                    <a onclick="scrollToSelection()" class="nav-link" href="#">Selection</a>
                 </li>
                 <li class="nav-item">
                     <a onclick="scrollToAnimation()" class="nav-link" href="#">Animation</a>
@@ -23,6 +23,9 @@
                 </li>
                 <li class="nav-item">
                     <a onclick="scrollToAJAX()" class="nav-link" href="#">AJAX</a>
+                </li>
+                <li class="nav-item">
+                    <a onclick="scrollToEvents()" class="nav-link" href="#">Events</a>
                 </li>
             </ul>
         </div>
@@ -66,6 +69,35 @@
 
         <p class="btc"></p>
         <button onclick="ajax()">Get Data from API</button>
+    </div>
+
+    <p id="p1" onclick="p1()">Click this text to hide it</p>
+    <p id="p2" onclick="p2()">Double click this text to hide it</p>
+    <p id="p3" onmouseover="p3()">Hover over this text to turn it large and red</p>
+    <button type="button" onclick="toggleParagraphs()">Toggle All Paragraphs</button>
+
+    <div class="p-5">  
+        <h3>Example Filter List</h3>
+        <input class="form-control" onkeyup="liveSearch()" id="myInput" type="text" placeholder="Type to Filter List Below..." style="width:250px">
+        <br>
+        <input class="form-control" id="itemEnter" type="text" placeholder="Enter item to be appended to the list..." style="width:250px">
+        <button type="button" onclick="addItem()">Add Item</button>
+        
+        <ul class="list-group" id="myList" style="width:500px">
+            <li class="list-group-item">Squirrel</a></li>
+            <li class="list-group-item">Alligator</a></li>
+            <li class="list-group-item">Snake</a></li>
+            <li class="list-group-item">Lion</a></li>
+            <li class="list-group-item">Iguana</a></li>
+            <li class="list-group-item">Rabbit</a></li>
+            <li class="list-group-item">Penguin</a></li>
+            <li class="list-group-item">Frog</a></li>
+            <li class="list-group-item">Gorrilla</a></li>
+            <li class="list-group-item">Dolphin</a></li>
+            <li class="list-group-item">Llama</a></li>
+            <li class="list-group-item">Crab</a></li>
+            <li class="list-group-item">Zebra</a></li>
+        </ul>
     </div>
 
 </body>

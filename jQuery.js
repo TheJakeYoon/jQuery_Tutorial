@@ -38,6 +38,12 @@ function scrollToAJAX(){
     }, 500);
 }
 
+function scrollToEvents(){
+    $('html, body').animate({
+        scrollTop: $("#p1").offset().top
+    }, 500);
+}
+
 function animation1(){
     $("#animation-box").animate({height: "500px"});
     $("#animation-box").animate({height: "250px"});
@@ -64,4 +70,48 @@ function ajax(){
         let temp = JSON.parse(data);
         $(".btc").text("1 BTC = $" + temp["bpi"]["USD"]["rate"]);
     });
+}
+
+// Event
+function p1(){
+    //$("#p1").click(function () {
+        $("#p1").hide();
+    //});
+}
+
+function p2(){
+    $("#p2").dblclick(function () {
+        $(this).hide();
+    });
+}
+
+function p3(){
+    $("#p3").hover(function () {
+        //Setting CSS properties based on mouse event
+        $(this).css({ 'color': 'red', 'font-size': '150%' });
+    },
+        function () {
+            $(this).css({ 'color': 'black', 'font-size': '100%' });
+        });
+}
+
+function toggleParagraphs(){
+        //Using element selector to toggle all paragraphs at once  
+        $("p").toggle();
+}
+
+function liveSearch(){
+    //Using jQuery events to live filter a user search
+    //$(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myList li").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    //});
+}
+
+function addItem(){
+            $("#myList").append('<li>' + $("#itemEnter").val() + '</li>');
 }
